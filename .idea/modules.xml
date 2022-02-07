@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/Django Deprecated/Inventory/.idea/Inventory.iml" filepath="$USER_HOME$/Django Deprecated/Inventory/.idea/Inventory.iml" />
+      <module fileurl="file://$USER_HOME$/Django Deprecated/TestProject/.idea/TestProject.iml" filepath="$USER_HOME$/Django Deprecated/TestProject/.idea/TestProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TimeSheet.iml" filepath="$PROJECT_DIR$/.idea/TimeSheet.iml" />
+    </modules>
+  </component>
+</project>
