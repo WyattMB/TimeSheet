@@ -19,6 +19,6 @@ from UserManagement import views as umv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/', umv.UserView.as_view()),
+    path('user/', umv.UserView.as_view()), # humm, one can have all the urls listed here but then the list will grow indefinite and also if you want to reuse any of the app in different project then one has to go thro' this list to copy appropriate urls pertaining to the app.
     path('', umv.blank),
 ]
