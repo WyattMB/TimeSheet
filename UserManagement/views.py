@@ -12,5 +12,5 @@ def blank(request):
     return HttpResponse("This is a blank url")
 
 class UserView(DetailView):
-    def get(self, request, *args, **kwargs):
+    def get(self, request, *args, **kwargs): # Good that you are trying to dig into the framework. Start working on CRUD operations and templates. 
         return HttpResponse("Hello")
