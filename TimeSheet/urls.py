@@ -19,6 +19,6 @@ from UserManagement import views as umv
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/', umv.user),
+    path('user/', umv.UserView.as_view()),
     path('', umv.blank),
 ]
