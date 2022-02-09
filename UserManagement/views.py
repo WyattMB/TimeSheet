@@ -8,6 +8,13 @@ from UserManagement.models import Profile
 
 # Create your views here.
 
+
+
+
+
+
+
+#Here down not going to be used, to be removed/replaced
 class UserDetail(DetailView):
     model = Profile
 
@@ -21,10 +28,6 @@ class UserDetail(DetailView):
 class HomeView(DetailView):
     model = Profile
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['pk'] = self.request.user
-    #     return context
     def get_object(self):
         return Profile.objects.get(user_id=self.request.user)
 
