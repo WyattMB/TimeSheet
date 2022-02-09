@@ -1,0 +1,24 @@
+{% extends'../base_timesheet.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>{{ object.name }}</h2>
+    <table>
+        <tr>
+            <td><b> User Name </b></td>
+            <td>&nbsp;&nbsp;</td>
+            <td> {{object.user.fname}} </td>
+        </tr>
+        <tr>
+            <td><b> Restaurant URL </b></td>
+            <td>&nbsp;&nbsp;</td>
+            <td>{{ object.url }}</td>
+        </tr>
+    </table>
+</body>
+</html>

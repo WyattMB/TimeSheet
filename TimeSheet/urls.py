@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from UserManagement import views as umv
+from django.contrib.auth import views as auth_views
+from django.views.generic import View, ListView, UpdateView, DetailView
+from django.views.generic.base import RedirectView
+from UserManagement.views import UserDetail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/', umv.UserView.as_view()),
-    path('', umv.blank),
+    path('user/', UserDetail.as_view()),
+    path('home/', UserDetail.as_view()),
+    path(r'^', RedirectView.as_view(url='/login/')),
+    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
 ]
