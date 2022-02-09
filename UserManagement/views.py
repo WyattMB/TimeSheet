@@ -10,8 +10,20 @@ from UserManagement.models import Profile
 
 class UserDetail(DetailView):
     model = Profile
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['pk'] = Profile.pk
+        return context
+
     template_name = 'templates/user_detail.html'
 
 class HomeView(DetailView):
     model = Profile
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['pk'] = Profile.pk
+        return context
+
     template_name = 'base_timesheet.html'

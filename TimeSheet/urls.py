@@ -22,8 +22,8 @@ from UserManagement.views import UserDetail, HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'user/(?P<pk>\d+)/$', UserDetail.as_view()),
-    re_path(r'home/(?P<pk>\d+)/$', HomeView.as_view()),
+    re_path(r'^login/user/(?P<pk>\d+)/$', UserDetail.as_view()),
+    re_path(r'^login/home/(?P<pk>\d+)/$', HomeView.as_view()),
     path("", RedirectView.as_view(url='/login/')),
-    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    path('registration/login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
 ]

@@ -122,7 +122,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 LOGIN_REDIRECT_URL= 'home/'
-LOGIN_URL = 'home/'
+LOGIN_URL = 'login/'
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_DIRS = (
     os.path.join(ROOT_DIR, 'templates'),
