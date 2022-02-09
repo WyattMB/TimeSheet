@@ -18,13 +18,12 @@ from django.urls import path, re_path
 from django.contrib.auth import views as auth_views
 from django.views.generic import View, ListView, UpdateView, DetailView
 from django.views.generic.base import RedirectView
-from UserManagement.views import UserDetail
+from UserManagement.views import UserDetail, HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path('user/(?P<pk>\d+)/$', UserDetail.as_view()),
-    re_path(r'home/(?P<pk>\d+)/$', UserDetail.as_view()),
-    path('success/', RedirectView.as_view(url=r'home/(?P<pk>\d+)/$')),
+    re_path(r'user/(?P<pk>\d+)/$', UserDetail.as_view()),
+    re_path(r'home/(?P<pk>\d+)/$', HomeView.as_view()),
     path("", RedirectView.as_view(url='/login/')),
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
 ]

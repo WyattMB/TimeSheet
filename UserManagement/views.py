@@ -10,4 +10,8 @@ from UserManagement.models import Profile
 
 class UserDetail(DetailView):
     model = Profile
-    template_name ='user_detail.html'
+    template_name = 'templates/user_detail.html'
+
+class HomeView(DetailView):
+    model = Profile
+    template_name = 'base_timesheet.html'
